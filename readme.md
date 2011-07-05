@@ -2,7 +2,7 @@
 
 Grep for Nucleotide FASTA files. Converts [IUPAC ambigious nucleotides](http://en.wikipedia.org/wiki/Nucleic_acid_notation) to regex.
 
-[REQUEST A FEATURE](https://github.com/audy/Forage/issues/new) (it's free!)
+[Request a feature](https://github.com/audy/Forage/issues/new) (it's free!)
 
 # Usage
 
