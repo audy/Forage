@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.homepage = 'http://www.github.com/audy/forage'
   s.rubyforge_project = 'forage'
   s.summary = 'Grep for nucleotide data.'
-  s.description = 'Forage is grep for nucleotide data. With Forage, you can grep nucleotide sequences in FASTA using the IUPAC ambigious nucleotides code.'
+  s.description = 'Forage is grep for nucleotide data. With Forage, you can grep nucleotide sequences in FASTA using the IUPAC ambiguous nucleotides code.'
 
   s.platform = Gem::Platform::RUBY
 

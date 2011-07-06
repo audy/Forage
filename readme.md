@@ -1,6 +1,6 @@
 # Forage
 
-Grep for Nucleotide FASTA files. Converts [IUPAC ambigious nucleotides](http://en.wikipedia.org/wiki/Nucleic_acid_notation) to regex.
+Grep for Nucleotide FASTA files. Converts [IUPAC ambiguous nucleotides](http://en.wikipedia.org/wiki/Nucleic_acid_notation) to regex.
 
 [Request a feature](https://github.com/audy/Forage/issues/new) (it's free!)
 
