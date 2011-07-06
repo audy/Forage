@@ -4,10 +4,19 @@ class Forage
   def initialize(handle, query)
     @handle = handle
     
-    @iupac = Hash.new { |h, k| h[k] = k }.merge(
-      { 'R' => 'AG', 'Y' => 'CTUY', 'S' => 'GCS', 'W' => 'ATUW', 'K' =>
-      'GTUK', 'M' => 'ACM', 'B' => 'CGTUB', 'D' => 'AGTUD', 'H' => 'ACTUH',
-      'V' => 'ACGV', 'N' => '.', '-' => '.'}
+    @iupac = Hash.new{ |h, k| h[k] = k }.merge({
+      'R' => '[AG]',
+      'Y' => '[CTUY]',
+      'S' => '[GCS]',
+      'W' => '[ATUW]',
+      'K' => '[GTUK]',
+      'M' => '[ACM]',
+      'B' => '[CGTUB]',
+      'D' => '[AGTUD]', 
+      'H' => '[ACTUH]',
+      'V' => '[ACGV]',
+      'N' => '.',
+      '-' => '.'}
     )
     
     @regex = self.convert query
@@ -26,7 +35,7 @@ class Forage
 
   # convert string to regex
   def convert(s)
-    @regex = s.each_char.collect { |n| "[#{@iupac[n]}]" }.join
+    @regex = s.each_char.collect { |n| "#{@iupac[n]}" }.join
     Regexp.new @regex
   end
   
@@ -39,7 +48,7 @@ class Forage
         sequence = ''
         header = line[1..-1].strip
       else
-        sequence << line.strip.tr(' ','')
+        sequence << line.strip.tr(' ','').upcase
       end
     end
     yield [ header, sequence ]

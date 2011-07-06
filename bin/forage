@@ -7,10 +7,13 @@ if ARGV.length != 2
   exit
 end
 
-forage = Forage.new File.open(ARGV[0]), ARGV[1]
+filename, query = ARGV[0], ARGV[1]
+
+
+forage = Forage.new File.open(filename), query
 
 forage.each do |matches|
   matches[1].each_with_index do |match, i|
-    puts ">#{matches[0]}:#{i}\n#{match}"
+    puts ">#{matches[0]}:#{i}\n#{match.join}"
   end
 end
