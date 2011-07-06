@@ -49,6 +49,11 @@ class Forage
   
 end
 
+if ARGV.length != 2
+  $stderr.puts "usage: forage filename.fasta query(regex)"
+  exit
+end
+
 forage = Forage.new File.open(ARGV[0]), ARGV[1]
 
 forage.each do |matches|
